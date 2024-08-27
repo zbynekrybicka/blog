@@ -148,9 +148,44 @@
             velmi často nehraje fér a používají se těžké podpásovky. O tom ale až někdy jindy.
         </p>
 
-        <p><i>O co jsem se tedy pokusil...</i></p>
+        <p>Můj první pokus byla hra, která se jmenovala prostě a jednoduše <em>That's life</em>. Když se dříve zmíněný spolužák díval na její UI, tak se smíchem poznamenal:
+          &bdquo;Tyjo, zatím je kolem nás dostatek neobydlené půdy, takže nemusíme válčit. Kde já jsem už tohle viděl?&ldquo; Ano. Kopíroval jsem svůj vzor až příliš. Neuvědomoval jsem
+          si však dvě velice důležité věci. Moje programátorské schopnosti, ač jsem ovládal všechny techniky potřebné k vytvoření takové hry, zdaleka pro takový cíl nestačily.
+          Neuvědomoval jsem si, že je zapotřebí víc než jenom naťukat nějaké uživatelské rozhranní a k tomu nějaké zpracování formulářů. Je potřeba naučit se nad tím strategicky
+          uvažovat, což je takový trochu až abstraktní pojem a je poměrně nesdělitelný pro někoho, kdo toto strategické uvažování nemá. 
+        </p>
+
+        <blockquote>Skutečně nevím, co bych poradil svému mladšímu já, pokud bych chtěl zpětně svůj vývoj a krystalizaci nějak urychlit. Zkušenosti, především ty špatné, ze kterých
+            máme možnost se poučit, jsou zkrátka nesdělitelné. Člověk si je musí zažít.
+        </blockquote>
+
+        <p>Druhý pokus, který jsem dotáhl do jakési fáze realizace byla hra s názvem Arrakis Life, která měla být kombinace WebGame a Duny Online. Konkrétní detaily návrhu, které jsme
+            tehdy dali dohromady, si již přesně nepamatuji. Vím jen, že jsem si pro tuto hru vytvořil pozadí v Terragenu, kde byl žlutý kopec. Vzpomínám si, že jsme se bavili o tom,
+            že můj návrh je velmi nevyvážený, protože pokud by se proti stíhačkám bránily všechny pozemní jednotky, tak šance na úspěšný útok je velice nízká, protože je-li základem
+            mít vyváženou armádu, neletecké jednotky oproti těm leteckým budou vždy převažovat. A pak jsme se ještě pohádali, že databáze MySQL je opravdu jediná správná cesta a ukládání
+            dat do souborů je nebezpečná zhýralost. Zpětně si připadám jak převlékač kabátů, protože jsem MySQL taky dlouho bojkotoval, jak jsem uvedl dříve.
+        </p>
 
         <h3>JavaScript</h3>
+
+        <p>Přestože jsem nedokončil ani jednu vysokou školu, nemůžu říct, že by studium na nich bylo zcela zbytečné. Přestože jsem tušil, že to asi nedám a do výuky jsem chodil s krajním
+            odporem, nějaké věci se ke mně přece jen dostaly a jsem za ně rád.
+        </p>
+
+        <hr>
+
+        <p>JavaScript pro mě byl několik let noční můra, protože několik prvních skriptů mi nefungovalo a nebyl jsem absolutně schopen přijít na to proč. Vždy mi s tím musel někdo poradit
+            a já jsem nechápal, jakto, že to ostatním funguje a mně ne. Potom ale nastala zásadní změna, kdy pan profesor na VŠ začal mluvit o anonymních funkcích. Přibližně ve stejnou
+            dobu jsem se dozvěděl o lambda výrazech, které pro mě byly tehdy ještě naprostá španělská vesnice a nechápal jsem jejich význam. Jakmile jsem se ale dozvěděl o anonymních funkcích
+            v JavaScriptu, začalo mi to být najednou jasné. A současně s tím jsem se dozvěděl a hlavně pochopil systém vnoření, které vyřešilo několik mých problémů, se kterými jsem se
+            do té doby v JS potýkal.
+        </p>
+
+        <p>To úplně nejdůležitější, co jsem se ale naučil, byla knihovna JQuery, která je sice již z dnešního pohledu zastaralá a rozhodně bych ji nikomu nedoporučil používat, protože se bez
+            ní spolehlivě obejdeme, ale v té době to pro mě byla revoluce. Najednou jsem nemusel řešit takové antipattern věci jako
+            <em>this.parent.parent.parent.getElementsByClassName("label")[0].innerHTML...</em>. Prakticky všechno se dalo zařídit naprosto elegantně a v kódu jsem se neztrácel. Teda přesněji,
+            neztrácel jsem se v něm tak brzo jako dřív.
+        </p>
 
         <h3>Nette</h3>
 
