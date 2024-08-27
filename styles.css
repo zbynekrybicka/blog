@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.menu-header {
+    text-align: center;
+    margin: 15px 0 0 0;
+}
+
+.menu-item {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-item:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    top: 100%;
+    left: calc(50% - 135px);
+    width: 250px;
+}
+
+.dropdown li.menu-item-header {
+    color: #AAA;
+    font-weight: bold;
+    margin: 10px 0
+}
+
+.dropdown li a {
+    display: block;
+    padding: 5px 0;
+    color: white;
+    text-decoration: none;
+}
+.dropdown li a:hover {
+    background-color: rgb(97, 97, 209);
+}
+
+main {
+    margin-top: 60px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.video-section {
+    text-align: center;
+    width: 100vw;
+    max-width: 640px;
+    margin: 30px auto 0 auto;
+}
+.video-section iframe {
+    width: 100vw;
+    max-width: 640px;
+    height: 58vw;
+    max-height: 376px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.thumbnail {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+#fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+#fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.text-section {
+    width: calc(100% - 40px);
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.text-section p.perex {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.text-section blockquote {
+    border: 1px solid black;
+    background-color: #EEE;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: .5em;
+    padding: .5em;
+}
