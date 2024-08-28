@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?=$title ?> &ndash; Zbyněk Rybička.cz</title>
-    <link rel="stylesheet" href="styles.css?5">
+    <link rel="stylesheet" href="styles.css?9">
 </head>
 <body>
     <header>

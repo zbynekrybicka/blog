@@ -14,9 +14,40 @@
     </section-->
 
     <div class="text-section">
+        <h2>Obsah</h2>
+
+        <ul>
+            <li><strong>Programování</strong>
+                <ul>
+                    <li><a href="#petr">Petr &ndash; Gemtree (Pokud bych dnes začínal, daleko více a důsledněji bych plánoval)</a></li>
+                    <li><a href="#php">PHP</a></li>
+                    <li><a href="#html">HTML+CSS</a></li>
+                    <li><a href="#javascript">JavaScript</a></li>
+                    <li><a href="#nette">Nette</a></li>
+                    <li><a href="#vue">Vue</a></li>
+                    <li><a href="#react">React (Už se mi nechce psát kód ručně, potřebuji generátor)</a></li>
+                </ul>
+            </li>
+            <li><strong>Grafika</strong>
+                <ul>
+                    <li><a href="#blender">Blender</a></li>
+                    <li><a href="#krita">Krita</a></li>
+                </ul>
+            </li>
+            <li><strong>Herní enginy</strong>
+                <ul>
+                    <li><a href="#gamemaker">Gamemaker</a></li>
+                    <li><a href="#unity">Unity</a></li>
+                    <li><a href="#unreal">Unreal Engine</a></li>
+                </ul>
+            </li>
+        </ul>
+
         <h2>Programování</h2>
 
-        <h3>Petr &ndash; Gemtree (Pokud bych dnes začínal, daleko více a důsledněji bych plánoval)</h3>
+        <a name="petr" class="anchor"></a>
+        
+        <h3> Petr &ndash; Gemtree (Pokud bych dnes začínal, daleko více a důsledněji bych plánoval)</h3>
 
         <p class="perex">Každý nějak začínal a každý se musel od něčeho odpíchnout. Já jsem začínal na vizuálním programovacím nástroji 
             <a href="http://www.gemtree.cz" target="_blank">Petr</a> od společnosti Gemtree.</p>
@@ -67,6 +98,8 @@
             zmapovat a vyvinout si techniky, díky kterým tento problém ustoupil na pozadí a už na něj téměř nenarážím.
         </p>
 
+        <a name="php" class="anchor"></a>
+
         <h3>PHP</h3>
 
         <p class="perex">Slýchal jsem to často a odmítal jsem si to přiznat, že vizuální drag&amp;drop programování není zrovna zářná budoucnost, zvlášť, pokud bych se
@@ -110,6 +143,8 @@
         <p>FalconBoard se mi podařilo dotáhnout do MVP a dokonce jeden můj spolužák, který si v té době taky dělal svoje webové stránky, jej použil. Fungovalo to dost bídně
             a já jsem nesmírně žářlil na konkurenci, ke které potom spolužák přešel.
         </p>
+
+        <a name="html" class="anchor"></a>
 
         <h3>HTML+CSS</h3>
 
@@ -166,6 +201,8 @@
             dat do souborů je nebezpečná zhýralost. Zpětně si připadám jak převlékač kabátů, protože jsem MySQL taky dlouho bojkotoval, jak jsem uvedl dříve.
         </p>
 
+        <a name="javascript" class="anchor"></a>
+
         <h3>JavaScript</h3>
 
         <p>Přestože jsem nedokončil ani jednu vysokou školu, nemůžu říct, že by studium na nich bylo zcela zbytečné. Přestože jsem tušil, že to asi nedám a do výuky jsem chodil s krajním
@@ -187,24 +224,136 @@
             neztrácel jsem se v něm tak brzo jako dřív.
         </p>
 
+        <div class="gallery">
+            <img src="gallery/co-jsem-se-naucil/javascript.png" alt="JavaScript" class="thumbnail">
+        </div>
+
+        <p>A s těmito technologickými dovednostmi se mi podařilo získat svoji první zakázku. Jestli můžu někomu něco doporučit, nikdy neobchodujte s příbuznými a s kamarády. Všichni známe přísloví
+            <em>v nouzi poznáš přítele</em>, ale neméně důležité je, že <em>dobré účty dělají dobré přátele</em>. To druhé zde bylo těžce porušené a stálo mě to málem blázinec. A to si nedělám
+            legraci.
+        </p>
+
+        <p>Jeden kamarád (dnes již bývalý) mě oslovil, že by chtěl udělat informační systém pro svoji firmu, která se zabývá řízením týmu obchodníků. (Řekněme si to narovinu, jednalo se o MLM.)
+            Já jsem s nadšením souhlasil a věřil jsem, že po patnácti letech všelijakých pokusů a učení se konečně bude moje práce užitečná i zaplacená. Na obojí jsem si musel ještě několik let počkat,
+            ale bez tohoto kroku by to pravděpodobně nenastalo.
+        </p>
+
+        <blockquote>Ač jsou vzpomínky na tuto dobu jedny z nejhorších v mém životě, dokonale se tu prokázalo, že &bdquo;co tě nezabije, to tě posílí&ldquo;.</blockquote>
+
+
+        <p>Vrhnul jsem se do realizace s obrovským nadšením doslova po hlavě. Po měsíci implementace se mi podařilo dotáhnout jakž takž použitelnou první funkční verzi systému včetně nařezané grafiky
+            od designera. Jenže, v aplikaci byla obrovská spousta chyb, o kterých jsem ani netušil, že můžou nastat. Dnes už legenda, o které mluvím často, byl tam formulář pro vyhodnocení výsledku
+            schůzky s potenciálním klientem. Hodnocení mělo být na stupnici od jedné do desíti, na což tam bylo deset radioboxů. Jenže ony ten výsledek ukládaly špatně. Nejdřív jsem si myslel, že to ti
+            uživatelé prostě špatně vyplnili a odmítal jsem se tím zabývat. Potom ale začaly chodit výsledky schůzky s hodnotou 11, 12 a více. To už se obhájit nedalo. Tak jsem se do toho kódu podíval,
+            tehdy s nesnesitelným odporem, protože jsem se tím již zabývat nechtěl, a zjistil jsem, že do toho hodnocení se ukládá ve skutečnosti ID klienta. To byl ten můj slavný <em>mysql_fetch_row</em>,
+            který jsem potom sdílel na <a href="https://hovnokod.cz/4339">HovnoKod.cz</a>. Počet takových stupidních chyb, které se mi podařilo během vývoje udělat, šel do stovek, já jsem se potácel téměř na hranici šílenství a když jsem uviděl v helpdesku nový požadavek, připadal
+            měl jsem pocit jako kdyby mě přišli zatknout a odvést do vězení.
+        </p>
+
+
+        <a name="nette" class="anchor"></a>
+
         <h3>Nette</h3>
 
-        <h3>Vue/React</h3>
+        <p class="perex">Byl nejvyšší čas si uvědomit, že aplikace se prostě mají dělit do více částí a nemá se míchat logika frontendu a backendu a i ty by se měly dělit na příjem a posílání dat a na
+            jejich zpracování.
+        </p>
 
-        <h3>C#</h3>
+        <hr>
+
+        <p>Zadavatel toho informačního systému se mě zeptal, jestli je práce na něm opravdu tak neudržitelná, jak vypadám já. Řekl jsem mu, že skutečně nevím, jak to dál spravovat, když je to totální chaos.
+            Tak se mě zeptal, jestli znám nějaký jiný způsob, jak to vytvářet. Řekl jsem mu, že na VŠ nám říkali o frameworku Nette, tak se mě zeptal, jestli bych ho k nemohl použít pro lepší tvorbu.
+            Dohodli jsme se, že to zkusím. Mě se opět zmocnilo nadšení a začal jsem aplikaci implementovat v Nette. No, implementovat. Začal jsem přepisovat jednotlivé funkce do metod jednoho obřího objektu.
+            Opět bez rozmyslu a nějakého reálného plánu. Nemá asi smysl to dál protahovat a řeknu rovnou, že za chvíli jsem na tom byl úplně stejně jako předtím. Framework jsem všelijak ohýbal, protože jsem
+            nepochopil podstatu mnoha jeho funkcí. Například zpracování formulářů byla kapitola sama o sobě.</p>
+
+        <blockquote>Připadalo mi, že jediný způsob, jak aplikaci spravit, je napsat ji celou odznova. Jenže to u tak rozsáhlé už prostě nebylo možné.</blockquote>
+        
+        <p>Tedy tento informační systém se dočkal celkem tří funkčních verzí z celkem šesti rozpracovaných. Jestli jsem se během těch tří let práce, za kterou jsem ani nedostal zaplaceno, něco naučil, 
+            tak jsou to dvě věci. První jsem tady už dříve zmiňoval, že je třeba mít skutečně naplánovaný a ustanovený systém práce, abych byl nejen schopen udržet si v aplikaci pořádek, ale také, aby byla
+            aplikace škálovatelná. Pravděpodobně neexistuje jakákoli aplikace, která by sloužila k evidenci nebo prodeji čehokoli, aby ji nebylo potřeba v průběhu provozu měnit nebo rozšiřovat. A ta druhá věc
+            je, že je třeba na vše mít sepsanou smlouvu a trvat na jejím dodržení z obou stran. A nebavíme se tady o rámcové smlouvě o díle ale doslova o kontraktech s platbou za úkon. Právníci přece taky
+            nedostávají paušál za celý soudní případ. Účtují si za úkony. Já jsem sice stále o dost levnější než běžný právník (věřte, že s tím mám zkušenosti), ale dlouhou dobu jsem mimo jiné díky této 
+            &bdquo;spolupráci&ldquo; záviděl &bdquo;astronomické&ldquo; platy uklízečkám.
+        </p>
+
+        <div class="gallery">
+            <img src="gallery/co-jsem-se-naucil/nette-welcome.png" alt="JavaScript" class="thumbnail">
+            <img src="gallery/co-jsem-se-naucil/nette-kod.jpg" alt="JavaScript" class="thumbnail">
+        </div>
+
+        <p>Doufal jsem a naštěstí se to ukázalo jako dobré, že když jsem si takto vylámal zuby na svém prvním reálně používaném projektu, tak by mě mohl někdo zaměstnat za nějakých lepších podmínek. To se mi 
+            naštěstí podařilo, i když to stále nebylo ono. Našel jsem si práci na pozici, která sice nesla název programátor ale s platem kodéra, který neměl možnost dělat jakákoli rozhodnutí, ale nesl jsem
+            zodpovědnost za finální funkčnost projektů. Ty mi byly postupně přidělené čtyři. První dva byly e-shopy, které byly postavené na identické šabloně a dokonce jsem byl svědkem hromadného kopírování
+            funkčního kódu z jednoho projektu do druhého, který se pak pouze napojil na jinou databázi se stejnou strukturou a jinými daty. Samozřejmě, neobešlo se to bez problémů a chyb, které jsme řešili,
+            jako například, proč se nám v e-shopu přidalo do košíku s domácími žárovkami grilovací koření. Odpověď je obecně jednoduchá. Neklonujte projekty, protože nikdy nevíte, jakou záludnost si přenesete
+            z jednoho do druhého. To je skoro horší než malware.
+        </p>
+
+        <a name="vue" class="anchor"></a>
+
+        <h3>Vue</h3>
+
+        <p class="perex">Toužil jsem tvořit weby, které by vypadaly opravdu dobře a taky by dobře fungovaly. Kolega mi dal tip zkusit VueJS. Dlouhou dobu předtím i potom jsem zažil v životě takovou euforii jako když jsem
+            si vyzkoušel Vue na <a href="https://jsfiddle.net/" target="_blank">jsfiddle.net</a>. Sice jsem to s tím nadšením přehnal, když jsem prohlásil, že tohle řeší všechny moje problémy, ale byl to opravdu
+            obrovský skok vpřed.
+        </p>
+
+        <hr>
+
+        <p>Okamžitě jsem chtěl všechny svoje projekty dělat ve Vue. Snad nikdy v mém životě se neprojevilo výrazněji přísloví <em>Nekřič hop, dokud nepřeskočíš</em>. Velmi důležitou, i když ne nezbytnou, součástí
+            práce ve Vue je buildovací nástroj. Chtěl jsem použít Webpack. Ten však měl jednu zásadní slabinu, která se projevila v naprosto absurdní situaci. Zahájil jsem práci na projektu ve Vue a zadavatel
+            rozhodl, že na projektu budeme pracovat dva, přičemž druhý kolega byl především grafik a HTML kód většinou kopíroval z ukázkových souborů na Githubu nebo jinde po internetu. Budiž mu prominuto, jako
+            grafik a návrhář byl na jedničku a toto si ani on sám nepřál. Problém však byl v tom, že on začal do toho projektu míchat další technologie, které jsem tam už nechtěl, například zmíněné JQuery a korunu
+            tomu nasadil ve chvíli, kdy začal upravovat WebPackem vygenerovaný zdroják, protože ten, který jsem mu poslal na úpravy, údajně nefungoval. Nefungoval proto, že on neměl kompilátor.
+        </p>
+
+        <blockquote>Krušný přechod na SPA aplikace, které jsou dnes tak elegantní a spolehlivé, měl ještě jednu zásadní vadu na kráse. Když jsem začal přepracovávat do Vue dříve zmíněný informační systém pro obchodníky,
+            narazil jsem na problém, že všechna data se musela předávat skrze velice košatý strom vnořených komponent. Tehdy jsem ještě netušil, že existuje něco jako store a že by bylo rozhodně dobré jej použít.
+        </blockquote>
+            
+        <div class="gallery">
+            <img src="gallery/co-jsem-se-naucil/vue.png" alt="VueJS" class="thumbnail">
+            <img src="gallery/co-jsem-se-naucil/vue-template.jpg" alt="Vue template" class="thumbnail">
+        </div>
+
+        <p>Tuto práci jsem nakonec vzdal a svému v tu chvíli již bývalému kamarádovi jsem řekl, že na mě tři roky parazitoval, že nikdy nedodržel, co on mi slíbil (a že toho bylo, od plateb, přes společné s. r. o.
+            až po připojení se do kruhu milionářů), že jeho způsob zadávání práce byl srovnatelný s šikanou, byl schopný se mi ozvat ve tři hodiny v noci, že něco nefunguje a když jsem mu ve čtyři hodiny volal, že
+            jsem chybu neobjevil, telefon mi nebral a o dva dny později se mě ptal, jestli jsem to spravil. A taky že mě neskutečně štvalo jeho permanentní projevování bohorovnosti. Nakonec jsem řekl: &bdquo;Jako
+            chápu, že jsem se nezachoval vždy úplně nejlíp, ale...&ldquo; On se podíval na svoje nové Rolexky a řekl: &bdquo;Takže... 43 minut ti trvalo, než jsi uznal svoji vlastní chybu...&ldquo; Odešel jsem
+            tehdy z toho setkání a před očima jsem měl totálně prázdno a vlastně jsem ani nevěděl, co mám dělat dál, protože de facto jsem v tu chvíli vyšel z vězení, na které jsem si tak trochu zvykl (Stockholmský
+            syndrom) a nevěděl jsem, co dělat na svobodě. Naštěstí jsem se vzpamatoval a začal jsem pracovat pro někoho normálnějšího. Jak jsem říkal, jestli skutečně platí, <em>co tě nezabije, to tě posílí</em>,
+            možná právě tohle bylo potřeba, abych se dostal tam, kde jsem nyní. 
+        </p>
+
+        <a name="react" class="anchor"></a>
+
+        <h3>React (Už se mi nechce psát kód ručně, potřebuji generátor)</h3>
+
+        <p class="perex">Přestože jsem Vue uměl již poměrně dobře a dodnes s ním rád pracuji, přecejen jsem vnímal, že potřebuji dohnat mainstream a naučit se pracovat s technologiemi, které používají velcí hráči.
+            A nejen to. Naučil jsem se, že co lze automatizovat, to chci automatizovat.
+        </p>
+
+        <hr>
+
 
         <h2>Grafika</h2>
 
+        <a name="blender" class="anchor"></a>
         <h3>Blender</h3>
 
+        <a name="krita" class="anchor"></a>
         <h3>Krita</h3>
 
         <h2>Herní enginy</h2>
 
+        <a name="gamemaker" class="anchor"></a>
         <h3>Gamemaker</h3>
 
+        <a name="unity" class="anchor"></a>
         <h3>Unity</h3>
 
+        <a name="unreal" class="anchor"></a>
         <h3>Unreal Engine 5</h3>
     </div>
 </main>

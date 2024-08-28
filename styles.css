@@ -86,12 +86,13 @@ h1 {
 .gallery {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
     margin: 20px 0;
 }
 
 .thumbnail {
-    width: 100px;
+    width: 200px;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -122,6 +123,7 @@ h1 {
     max-width: 800px;
     padding: 20px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .text-section p.perex {
@@ -136,4 +138,19 @@ h1 {
     font-weight: bold;
     margin: .5em;
     padding: .5em;
+}
+
+a.anchor {
+    position: relative;
+    top: -100px;
+}
+ul li {
+    list-style-type: none;
+}
+ul li strong {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
