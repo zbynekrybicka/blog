@@ -58,6 +58,11 @@ nav {
     color: white;
     text-decoration: none;
 }
+.dropdown li a.disabled {
+    pointer-events: none;
+    color: #AAA;
+    font-style: italic;
+}
 .dropdown li a:hover {
     background-color: rgb(97, 97, 209);
 }

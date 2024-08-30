@@ -20,18 +20,19 @@
             <div class="menu-item"><?=$title; ?> &ndash; Zbyněk Rybička.cz
                 <ul class="dropdown">
                     <li class="menu-item-header">Hry</li>
-                    <li><a href="#">Adventure Arkanoid</a></li>
-                    <li><a href="#">Narrow Path</a></li>
-                    <li><a href="#">Island Crystal Miner<br>Clicker Strategy</a></li>
-                    <li><a href="#">Nature Cybernetic Robots</a></li>
+                    <li><a href="#adventure-arkanoid">Adventure Arkanoid</a></li>
+                    <li><a href="#narrow-path">Narrow Path</a></li>
+                    <li><a href="#island-crystal-miner">Island Crystal Miner<br>Clicker Strategy</a></li>
+                    <li><a href="#nature-cybernetic-robots">Nature Cybernetic Robots</a></li>
+                    <li><a href="#" class="disabled">Datová vzpoura</a></li>
+                    <li><a href="#" class="disabled">Kossai</a></li>
+                    <li><a href="#" class="disabled">Zintaki</a></li>
                     <li><hr></li>
                     <li class="menu-item-header">O mně</li>
                     <li><a href="?id=co-jsem-se-naucil">Co jsem se naučil?</a></li>
-                    <li><hr></li>
-                    <li class="menu-item-header">Recenze her</li>
-                    <li><a href="#">Age of Empires I</a></li>
-                    <li><a href="#">Little Big Adventure</a></li>
-                    <li><a href="#">Need for Speed Underground II</a></li>
+                    <li><a href="?id=jakou-praci-jsem-delal">Jakou práci jsem dělal?</a></li>
+                    <li><a href="?id=ostatni-umelecka-tvorba">Ostatní umělecká tvorba</a></li>
+                    <li><a href="?id=muj-osobni-lore">Můj osobní lore</a></li>
                 </ul>
             </div>
         </nav>
