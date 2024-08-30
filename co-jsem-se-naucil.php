@@ -28,17 +28,17 @@
                     <li><a href="#react">React (Už se mi nechce psát kód ručně, potřebuji generátor)</a></li>
                 </ul>
             </li>
-            <li><strong>Grafika</strong>
-                <ul>
-                    <li><a href="#blender">Blender</a></li>
-                    <li><a href="#krita">Krita</a></li>
-                </ul>
-            </li>
             <li><strong>Herní enginy</strong>
                 <ul>
                     <li><a href="#gamemaker">Gamemaker</a></li>
                     <li><a href="#unity">Unity</a></li>
                     <li><a href="#unreal">Unreal Engine</a></li>
+                </ul>
+            </li>
+            <li><strong>Grafika</strong>
+                <ul>
+                    <li><a href="#blender">Blender</a></li>
+                    <li><a href="#krita">Krita</a></li>
                 </ul>
             </li>
         </ul>
@@ -336,14 +336,130 @@
 
         <hr>
 
+        <p>Můj první tutoriál na výuku ReactJS, který jsem zhlédl, bylo čiré utrpení. Potom, co jsem znal Vue, mi přišlo nadmíru absurdní vkládat elementy přímo do kódu. Připomnělo mi to tu moji improvizaci,
+            co jsem sdílel na <a href="https://hovnokod.cz/4339">HovnoKod.cz</a>. Říkal jsem si ale, že to nevzdám, protože to je přece moje budoucnost a nechci ji zahodit. Druhý problém, který nastal, že jsem
+            nechápal, proč mi to nefunguje a dát dohromady funkční stack mi ze začátku připadalo jako nadlidský úkol. To už mám naštěstí za sebou a <em>npx</em> to jistí.
+        </p>
 
-        <h2>Grafika</h2>
+        <div class="gallery">
+            <img src="gallery/co-jsem-se-naucil/ReactJS.jpg" alt="ReactJS" class="thumbnail">
+            <img src="gallery/co-jsem-se-naucil/Redux.jpg" alt="Redux" class="thumbnail">
+        </div>
 
-        <a name="blender" class="anchor"></a>
-        <h3>Blender</h3>
+        <p>Co mě ale znervóznilo o hodně víc, že jsem stále ještě neměl best practice ohledně data store. Nejprve jsem to chtěl řešit pomocí globální proměnné, což je ta největší blbost, to opravdu nikdy nedělejte.
+            Potom se mi podařilo objevit knihovnu <em>Redux</em>, což v té době byly <em>React + Redux</em> téměř nerozlučná dvojice. Systém ukládání dat pomocí Reduxu se mi podařilo celkem pochopit. Tam jsem
+            až takový problém s učením neměl. Co mi ale dělalo mnohem větší starost, že mi připadalo, že musím psát neustále dokola obrovské množství kódu, nemůžu dát <em>CTRL+C, CTRL+V</em> a je to strašně
+            neefektivní. Dnes už vím, že to je systém kontroly v jednotlivých fázích zpracování uživatelských požadavků a každá jedna část má na starosti bezproblémový tok a případně konverzi oběma směry dat.
+        </p>
 
-        <a name="krita" class="anchor"></a>
-        <h3>Krita</h3>
+
+        <p>Díky tomu, že mi React + Redux připadaly tak předimenzované, ale přesto jsem se rozhodl vytvořit v nich poměrně rozsáhlý projekt (ze kterého ale nakonec stejně sešlo), jsem začal vymýšlet, jak si to
+            zjednodušit. Základní myšlenka, kterou jsem nosil v hlavě dlouho, byla, že mnoho struktur a zápisů se v kódu opakuje, ale není možné je jen tak kopírovat. A to byla moje prvotní myšlenka na vytvoření <em>Automatizovaného programovacího systému (APS)</em>.
+        </p>
+
+        <blockquote>Co takhle, kdybych ty zdrojáky generoval a sám zapisoval přímo pouze změny v těchto souborech?</blockquote>
+
+        <p>Problémem byla datová struktura. Předpokládal jsem, že bude hodně velká a nepůjde dělit. První, co mě napadlo, byl JSON. Ten je jednoduchý, umím s ním pracovat a lze neomezeně strukturovat.
+            Můj první pokus generovat kód podle šablon společně s vloženými daty, nebyl úplně špatný, ale pro uspokojivý výsledek to nestačilo, protože jsem neměl skutečnou kontrolu nad tím, jestli jsem
+            něco nezapomněl. Tento zdroják totiž nekontroloval smysluplnost.
+        </p>
+
+        <p>Druhý pokus jsem uskutečnil s dříve podceňovaným, ale v tu chvíli, jak se ukázalo, velice zajímavým a užitečným XML. To bylo možné také téměř nekonečně strukturovat a současně se mi dařilo velmi
+            udržovat si v mnou napsaném kódu určitý přehled. Narazil jsem však na problém, že ani sebelepší návrh nemusí vždy stačit a je možné požadovat něco netypického. To bylo ve skutečnosti v této podobě
+            jednodušší, než by se na první pohled zdálo. Jelikož tyto soubory se generují na pokyn v šabloně, ale současně se na ně na jiných místech šablony odkazuje, proč to neudělat tak, že dotyčný soubor
+            se generovat nebude? To bylo jednoduché a svérazné řešení. Kontrolu, zda se generují všechny požadované soubory, jsem neprováděl, protože jsem věděl, že pokud by nějaký chyběl, projeví se to
+            ve výsledné aplikaci prakticky okamžitě, takže není třeba se touto otázkou zabývat. No a pak jednoduše specifický soubor napíšu ručně. Na tom nevidím nic špatného, protože moje iniciativa a snaha
+            přemýšlet nad podobou jednoho specifického souboru byla stále vysoko nad sepisováním mnoha téměř identických souborů.
+        </p>
+
+        <div class="gallery">
+            <img src="gallery/co-jsem-se-naucil/Simplemind-Desktop.png" alt="SimpleMind" class="thumbnail">
+            <img src="gallery/co-jsem-se-naucil/simpleMind.png" alt="Myšlenkové mapy" class="thumbnail">
+        </div>
+
+        <p>I z datových struktur v XML však nakonec sešlo a já jsem už zoufale hledal nějaký další způsob. Vyzkoušel jsem ještě YAML, ale ten dopadl obdobně, to ani nemá smysl nějak zvlášť rozepisovat. Co jsem 
+            ale ještě vyzkoušel, bylo vytváření stromové struktury v programu SimpleMind. Tento program má jednu úžasnou výhodu, že stromovou strukturu dokáže exportovat jako textový soubor a jednotlivé uzly
+            seřadí přesně podle pořadí ve vizuálu a jednotlivé úrovně vyznačí tabelátorem. Díky tomu nebyl téměř žádný problém výsledný text rozprarsovat a vygenerovat dané zdrojáky podle hodnot jednotlivých
+            uzlů i jejich pozic v myšlenkové mapě.
+        </p>
+
+        <p>Takto se mi podařilo například naprogramovat celou jednu aplikaci téměř čistě na mobilu během procházky v lese. Tím jsem chtěl právě vyzkoušet, jaký extrém dokáže tento systém zvládnout. Já totiž
+            obecně velmi nerad sedím v kanceláři na jednom místě několik hodin v kuse. Moje produktivita tak velmi brzy klesá pod neúnosnou hranici. Proto jsem hledal způsob, jak pracovat na mobilu. Tento systém
+            však stále neměl plnou kontrolu nad smysluplností datové struktury a současně jsem taky nemohl testovat, zda jsem neudělal nějakou chybu, což byla zase škoda. Chtěl jsem si ten generátor předělat,
+            aby fungoval online a nejlépe, aby se gitoval. K tomu jsem se nakonec nedostal, protože jsem zažil syndrom vyhoření a nechtěl jsem v jednu chvíli o další práci programátora ani slyšet.
+        </p>
+
+        <p>Potřeboval jsem přijít na jiné myšlenky, tak jsem dočasně přešel na práci kurýra a vozil jsem jídlo. Přestože to byla práce často velmi nepohodlná a nezřídka dost nudná, dokázal jsem si vyčistit hlavu
+            a přišel jsem s novým, v té chvíli již ultimátním nápadem. Já nebudu používat datovou strukturu ale rovnou samotné příkazy pro generování. Zdroják budu psát v PHP a použiji fluid režim. Ten mi umožní
+            nejen navazovat jedním příkazem na druhý, ale IDE mi umožní také specifikovat, jaké další kroky následují. Problém s kontrolou smysluplnosti byl tím pádem vyřešen. Ale kompletně celý systém jsem v tu
+            chvíli ještě zmáknutý neměl. Potřeboval jsem se naučit správně přemýšlet nad tvorbou generátoru, který by smysluplně pokrýval celý problém. To jsem vyřešil pomocí čtyřvrstvého datového modelu.
+        </p>
+
+        <ol>
+            <li><strong>Šablony</strong> &ndash; Každý typ souboru, a ve většině projektů jich bylo přibližně pět typů, měl přesně danou strukturu. Třída měla svoje metody, atributy a předka, komponenta měla
+            svůj obsah a vnořené komponenty atd. Vytvořil jsem si soubory <em>.latte</em>, které zcela jasně vyžadovaly hodnoty, které jsem měl pomocí vyšší vrstvy dodávat.
+            <li><strong>Data</strong> &ndash; Pole nebo objekt obsahující hodnoty, které šablona požaduje. Nebyly nějak rozsáhlé a ke každému typu souboru se ukládaly zvlášť. Díky jsem se zbavil rozsáhlých
+            špagety kódů definujících kompletní strukturu aplikace bez kontroly smysluplnosti.</li>
+            <li><strong>Integrace</strong> &ndash; Nad touto vrstvou jsem si lámal hlavu nejvíce, než jsem si uvědomil jeden úplně základní princip. Tvrdím-li, že se data v jednotlivých zdrojácích často
+            opakují, a nelze je prostě okopírovat, musí tam být změny, které se současně projevují ve více souborech najednou. A to byl klíč k řešení problému. Začal jsem si tvořit metody, které generovaly
+            jednotlivé hodnoty do šablon s důrazem na to, abych jakékoli dvě různé hodnoty stejného významu musel zapsat pouze jednou a ony se potom propsaly do jednotlivých zdrojáků v neměnné podobě. Díky tomu
+            globálně odpadl problém s překlepy v názvech proměnných a funkcí.</li>
+            <li><strong>Struktura</strong> &ndash; Když jsem měl tedy propojené generování jednotlivých dat tak, aby zůstala propojená, bylo potřeba tohle všechno zastřešit, abych mohl psát zdroják pro
+            generování aplikace tak, aby byl skutečně smysluplný. Vytvořil jsem si proto velkou soustavu PHP tříd, kde každá znamenala de facto inteligentní uzel ve stromové struktuře a současně obsahovala
+            metody, které v této struktuře mohly následovat jako další uzly, přičemž každá metoda vrátila objekt třídy, která obsahovala opět další metody použitelné v dalším kroku. Asi nejlépe to uvidíte
+            na příkladném příkazu.                
+            </li>
+        </ol>
+
+<pre>
+$template->element('button')
+         ->label('Vytvořit rezervaci')
+         ->onClick('postBooking', 'booking.data')
+         ->post('/booking', 'booking', 'BookingService', 'insert');
+</pre>
+
+        <p>Pokud bych tento příkaz použil samostatně, tak by vygeneroval přibližně následující zdrojáky.</p>
+
+        <h4>Template.jsx</h4>
+<pre>
+export default () => (&lt;button onClick="() => postBooking(this.state.booking.data)">Vytvořit rezervaci&lt;/button>)
+</pre>
+
+        <h4>postBooking.js</h4>
+
+<pre>
+export default (booking) => axios.post('/booking', booking)
+</pre>
+
+        <h4>routes.php</h4>
+
+<pre>
+$app->post('/booking', function($request, $response) => {
+    return $response->withJson($this->bookingService->insert($request->data));
+});
+</pre>
+
+        <h4>BookingService.php</h4>
+
+        <p><i>Ten jsem si napsal sám. Většinou jsem použil Pure SQL.</i></p>
+
+        <p>Celé je to samozřejmě zjednodušené. Jednak si to už přesně nepamatuji a taky to nemám jak otestovat, abych měl jistotu, že jsem skutečně na nic nezapomněl. Můžete ale vidět, že tyto čtyři řádky
+            byly schopné vytvořit komplexní funkcionalitu, která spolu souvisí a současně zůstat velmi přehledné, což vedlo k tomu, že jsem mohl mít všechno podstatné na jednom místě a změny bylo možné
+            provádět velmi snadno.
+        </p>
+
+        <h4>A proč tento systém nepoužívám?</h4>
+
+        <p>Ty důvody jsou ve skutečnosti dva. Ten první zjevný byl, že přišel ChatGPT, který v podstatě dokáže tohle všechno lépe, bez potřeby dalšího programování a ještě se v tom zlepšuje. Já sám v Brně
+            uprostřed Evropy s jedním notebookem prostě neporazím tým několika desítek nebo i stovek špičkových programátorů v Sillicon Valley.
+            A druhý důvod, proč jsem od tohoto systému upustil, byl ten, že jsem si konečně po mnoha letech uvědomil, že je nakonec přece jen nadbytečný. Nějaké generování šablon se určitě hodí, ale to hlavní,
+            co jsem postrádal a co jsem se snažil získat tímto systémem, byl přehled nad aplikací. V současné době pracuji tak, že používám program SimpleMind, do kterého si zapisuji názvy komponent do struktury
+        entity aplikace, na které se odkazují. Nemám potom problém dotrackovat, když potřebuji něco přidat, změnit nebo opravit.</p>
+
+        <blockquote>Za sebe můžu zcela zodpovědně prohlásit, že přes všechna ta úskalí,
+            nebo možná spíš právě díky nim jsem se do dnešních dní dostal na úroveň, kdy se můžu skutečně označit za programátora analytika a nikoli programátora kodéra a této schopnosti analyticky a také
+            strategicky uvažovat, si nesmírně cením.
+        </blockquote>
 
         <h2>Herní enginy</h2>
 
@@ -355,5 +471,14 @@
 
         <a name="unreal" class="anchor"></a>
         <h3>Unreal Engine 5</h3>
+
+        <h2>Grafika</h2>
+
+        <a name="blender" class="anchor"></a>
+        <h3>Blender</h3>
+
+        <a name="krita" class="anchor"></a>
+        <h3>Krita</h3>
+
     </div>
 </main>
